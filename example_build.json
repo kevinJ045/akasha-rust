@@ -1,0 +1,2552 @@
+{
+  "ttl": 0,
+  "data": [
+    {
+      "_id": "67dd5347827b14510f1ca88b",
+      "type": "current",
+      "characterId": 10000089,
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit DMG"
+        }
+      },
+      "artifactSets": {
+        "Golden Troupe": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15032_4.png",
+          "count": 4
+        },
+        "Marechaussee Hunter": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15031_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 0,
+      "costumeId": "",
+      "critValue": 220.759997266051,
+      "fetterInfo": {
+        "expLevel": 8
+      },
+      "lastBuildUpdate": 1743961606232,
+      "md5": "a4425b1c95c06ef0e1c282d3d47934b2",
+      "name": "Furina",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "6"
+        },
+        "level": {
+          "val": "90"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 8901,
+      "sortableType": "furina",
+      "stats": {
+        "critRate": {
+          "value": 0.634700259086102
+        },
+        "critDamage": {
+          "value": 1.92220022332332
+        },
+        "energyRecharge": {
+          "value": 1.56950022828242
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 0
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 38550.6289065088
+        },
+        "atk": {
+          "value": 1153.68334986818
+        },
+        "def": {
+          "value": 840.6992190088
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_01.png",
+          "level": 1,
+          "rawLevel": 1,
+          "id": 10891,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Furina_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 10892,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Furina_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 10895,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 4
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Sword_Machination"
+          }
+        },
+        "name": "Fleuve Cendre Ferryman",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Sword_Machination_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Furina.png",
+      "index": 1,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Hydro"
+      }
+    },
+    {
+      "_id": "67b4eee8c7eb82716302dc23",
+      "characterId": 10000096,
+      "type": "current",
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "ATK%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "Pyro DMG Bonus"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit DMG"
+        }
+      },
+      "artifactSets": {
+        "Fragment of Harmonic Whimsy": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15035_4.png",
+          "count": 4
+        },
+        "Song of Days Past": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15033_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 0,
+      "costumeId": "",
+      "critValue": 216.10999851524,
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "lastBuildUpdate": 1739910888587,
+      "md5": "55db61dfe6f01dc43fbc7495dd4cf80c",
+      "name": "Arlecchino",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "6"
+        },
+        "level": {
+          "val": "90"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 9601,
+      "sortableType": "arlecchino",
+      "stats": {
+        "critRate": {
+          "value": 0.610894897572101
+        },
+        "critDamage": {
+          "value": 2.39190093576104
+        },
+        "energyRecharge": {
+          "value": 1.0000008732
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 16.3200005680242
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0.466000863901675
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 19258.9531258732
+        },
+        "atk": {
+          "value": 1764.42065517008
+        },
+        "def": {
+          "value": 939.876709857575
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_03.png",
+          "level": 9,
+          "rawLevel": 9,
+          "id": 10961,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Arlecchino_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 10962,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Arlecchino_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 10965,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 4
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Ruby"
+          }
+        },
+        "name": "White Tassel",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Ruby_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Arlecchino.png",
+      "index": 2,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Pyro"
+      }
+    },
+    {
+      "_id": "67643be5a9ccbb26872d654a",
+      "characterId": 10000052,
+      "type": "current",
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "Energy Recharge"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "Electro DMG Bonus"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit DMG"
+        }
+      },
+      "artifactSets": {
+        "Emblem of Severed Fate": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+          "count": 5
+        }
+      },
+      "constellation": 0,
+      "costumeId": "",
+      "critValue": 205.279998521754,
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "lastBuildUpdate": 1744708175784,
+      "md5": "d8d2dac283ec535ba67cfd5631fd5849",
+      "name": "Raiden Shogun",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "6"
+        },
+        "level": {
+          "val": "90"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 5201,
+      "sortableType": "raiden shogun",
+      "stats": {
+        "critRate": {
+          "value": 0.567200555154474
+        },
+        "critDamage": {
+          "value": 1.51840050394216
+        },
+        "energyRecharge": {
+          "value": 2.63458044702688
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 0
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 1.11983249957243
+        },
+        "maxHp": {
+          "value": 20768.0332036751
+        },
+        "atk": {
+          "value": 2048.4490987649
+        },
+        "def": {
+          "value": 867.995422913381
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_03.png",
+          "level": 7,
+          "rawLevel": 7,
+          "id": 10521,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Shougun_01.png",
+          "level": 9,
+          "rawLevel": 9,
+          "id": 10522,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Shougun_01.png",
+          "level": 10,
+          "rawLevel": 10,
+          "id": 10525,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Narukami"
+          }
+        },
+        "name": "Engulfing Lightning",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Narukami_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Shougun.png",
+      "index": 3,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Electro"
+      }
+    },
+    {
+      "_id": "6796a62f0839e65b24fddfad",
+      "type": "current",
+      "characterId": 10000059,
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "ATK%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "Anemo DMG Bonus"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit DMG"
+        }
+      },
+      "artifactSets": {
+        "Viridescent Venerer": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15002_4.png",
+          "count": 2
+        },
+        "Gladiator's Finale": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15001_4.png",
+          "count": 2
+        },
+        "Marechaussee Hunter": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15031_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 6,
+      "costumeId": "",
+      "critValue": 196.689999214997,
+      "fetterInfo": {
+        "expLevel": 9
+      },
+      "lastBuildUpdate": 1745064725123,
+      "md5": "bb077bda31ab121037e128317d8e2ae5",
+      "name": "Shikanoin Heizou",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "5"
+        },
+        "level": {
+          "val": "80"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+        "5932": 3,
+        "5939": 3
+      },
+      "skillDepotId": 5901,
+      "sortableType": "shikanoin heizou",
+      "stats": {
+        "critRate": {
+          "value": 0.429251025309671
+        },
+        "critDamage": {
+          "value": 1.88350097357284
+        },
+        "energyRecharge": {
+          "value": 1.52450100599777
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 0
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0.796000997414697
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 14493.9208994311
+        },
+        "atk": {
+          "value": 1083.68896583735
+        },
+        "def": {
+          "value": 663.958436052194
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_Catalyst_MD.png",
+          "level": 7,
+          "rawLevel": 7,
+          "id": 10591,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Heizo_01.png",
+          "level": 11,
+          "rawLevel": 8,
+          "id": 10592,
+          "boosted": true
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Heizo_01.png",
+          "level": 9,
+          "rawLevel": 6,
+          "id": 10595,
+          "boosted": true
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 40,
+          "promoteLevel": 1,
+          "refinementLevel": {
+            "value": 2
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Catalyst_Phoney"
+          }
+        },
+        "name": "Twin Nephrite",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Phoney_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Heizo.png",
+      "index": 4,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Anemo"
+      }
+    },
+    {
+      "_id": "67643be5a9ccbb26872d654e",
+      "type": "current",
+      "uid": "772493838",
+      "characterId": 10000087,
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "Hydro DMG Bonus"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit DMG"
+        }
+      },
+      "artifactSets": {
+        "Marechaussee Hunter": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15031_4.png",
+          "count": 4
+        },
+        "Golden Troupe": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15032_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 0,
+      "costumeId": "",
+      "critValue": 180.379998479081,
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "lastBuildUpdate": 1744389176347,
+      "md5": "d38795095ef4fa2f0bc51cef1a463a55",
+      "name": "Neuvillette",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "6"
+        },
+        "level": {
+          "val": "90"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 8701,
+      "sortableType": "neuvillette",
+      "stats": {
+        "critRate": {
+          "value": 0.368900678349042
+        },
+        "critDamage": {
+          "value": 2.60128065128376
+        },
+        "energyRecharge": {
+          "value": 1.06480070133259
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 34.9700018980031
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0.466000668001675
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 34216.5703131773
+        },
+        "atk": {
+          "value": 1200.5156256773
+        },
+        "def": {
+          "value": 638.915772161675
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_Catalyst_MD.png",
+          "level": 10,
+          "rawLevel": 10,
+          "id": 10871,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Neuvillette_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 10872,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Neuvillette_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 10875,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Catalyst_Troupe"
+          }
+        },
+        "name": "The Widsith",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Neuvillette.png",
+      "index": 5,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Hydro"
+      }
+    },
+    {
+      "_id": "67f2be06827b14510f6e4420",
+      "characterId": 10000111,
+      "type": "current",
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "ATK%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "Electro DMG Bonus"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit DMG"
+        }
+      },
+      "artifactSets": {
+        "Long Night's Oath": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15039_4.png",
+          "count": 4
+        },
+        "Obsidian Codex": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15038_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 0,
+      "costumeId": "",
+      "critValue": 164.069999339651,
+      "fetterInfo": {
+        "expLevel": 5
+      },
+      "lastBuildUpdate": 1745064725088,
+      "md5": "d97eac2218d267643be8762ff0872094",
+      "name": "Varesa",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "6"
+        },
+        "level": {
+          "val": "90"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 11101,
+      "sortableType": "varesa",
+      "stats": {
+        "critRate": {
+          "value": 0.650300806235297
+        },
+        "critDamage": {
+          "value": 1.8753807599058
+        },
+        "energyRecharge": {
+          "value": 1.12310088224314
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 48.9599999243727
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0.466000830601675
+        },
+        "maxHp": {
+          "value": 21110.7812508399
+        },
+        "atk": {
+          "value": 1847.26147544928
+        },
+        "def": {
+          "value": 916.409973984431
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_Catalyst_MD.png",
+          "level": 9,
+          "rawLevel": 9,
+          "id": 11111,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Varesa_01.png",
+          "level": 6,
+          "rawLevel": 6,
+          "id": 11112,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Varesa_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 11115,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Catalyst_Troupe"
+          }
+        },
+        "name": "The Widsith",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Varesa.png",
+      "index": 6,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Electro"
+      }
+    },
+    {
+      "_id": "67643be5a9ccbb26872d6554",
+      "characterId": 10000023,
+      "type": "current",
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "Energy Recharge"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "Pyro DMG Bonus"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit RATE"
+        }
+      },
+      "artifactSets": {
+        "Emblem of Severed Fate": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+          "count": 4
+        },
+        "Viridescent Venerer": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15002_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 1,
+      "costumeId": 202301,
+      "critValue": 153.909999152408,
+      "fetterInfo": {
+        "expLevel": 9
+      },
+      "lastBuildUpdate": 1743448108983,
+      "md5": "ee4ccd1955baaa4d20551b7756ec8433",
+      "name": "Xiangling",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "5"
+        },
+        "level": {
+          "val": "80"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 2301,
+      "sortableType": "xiangling",
+      "stats": {
+        "critRate": {
+          "value": 0.512600907073004
+        },
+        "critDamage": {
+          "value": 1.11390084861277
+        },
+        "energyRecharge": {
+          "value": 2.24710101722239
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 92.9799966299391
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0.466000893101675
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 18831.8789071524
+        },
+        "atk": {
+          "value": 1054.64526457428
+        },
+        "def": {
+          "value": 854.967713304744
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_03.png",
+          "level": 2,
+          "rawLevel": 2,
+          "id": 10231,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Xiangling_01.png",
+          "level": 5,
+          "rawLevel": 5,
+          "id": 10232,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Xiangling_01.png",
+          "level": 7,
+          "rawLevel": 7,
+          "id": 10235,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 80,
+          "promoteLevel": 5,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Mori"
+          }
+        },
+        "name": "\"The Catch\"",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Mori_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_XianglingCostumeWinter.png",
+      "index": 7,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Pyro"
+      }
+    },
+    {
+      "_id": "67dd5347827b14510f1ca88c",
+      "type": "current",
+      "uid": "772493838",
+      "characterId": 10000088,
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "Elemental Mastery"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "ATK%"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit RATE"
+        }
+      },
+      "artifactSets": {
+        "Wanderer's Troupe": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15003_4.png",
+          "count": 2
+        },
+        "Golden Troupe": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15032_4.png",
+          "count": 2
+        },
+        "Obsidian Codex": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15038_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 6,
+      "costumeId": "",
+      "critValue": 122.819999969898,
+      "fetterInfo": {
+        "expLevel": 1
+      },
+      "lastBuildUpdate": 1745064725124,
+      "md5": "d5c0fe219a79e44d1bb00e192fe44be7",
+      "name": "Charlotte",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "3"
+        },
+        "level": {
+          "val": "60"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+        "8832": 3,
+        "8839": 3
+      },
+      "skillDepotId": 8801,
+      "sortableType": "charlotte",
+      "stats": {
+        "critRate": {
+          "value": 0.489300886688501
+        },
+        "critDamage": {
+          "value": 0.849600831566126
+        },
+        "energyRecharge": {
+          "value": 1.0518008866885
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 250.2500008741
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 12727.9863289991
+        },
+        "atk": {
+          "value": 887.445557514725
+        },
+        "def": {
+          "value": 415.095887104569
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_Catalyst_MD.png",
+          "level": 1,
+          "rawLevel": 1,
+          "id": 10881,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Charlotte_01.png",
+          "level": 4,
+          "rawLevel": 1,
+          "id": 10882,
+          "boosted": true
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Charlotte_01.png",
+          "level": 4,
+          "rawLevel": 1,
+          "id": 10885,
+          "boosted": true
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 40,
+          "promoteLevel": 2,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Catalyst_Fossil"
+          }
+        },
+        "name": "Sacrificial Fragments",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Fossil_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Charlotte.png",
+      "index": 8,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Cryo"
+      }
+    },
+    {
+      "_id": "67643be5a9ccbb26872d6558",
+      "characterId": 10000032,
+      "type": "current",
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "Energy Recharge"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "HP%"
+        }
+      },
+      "artifactSets": {
+        "Noblesse Oblige": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15007_4.png",
+          "count": 4
+        },
+        "Emblem of Severed Fate": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 3,
+      "costumeId": "",
+      "critValue": 74.6299991831504,
+      "fetterInfo": {
+        "expLevel": 7
+      },
+      "lastBuildUpdate": 1745064725122,
+      "md5": "f73a7e6a344bf96baed8db6521b4fc69",
+      "name": "Bennett",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "5"
+        },
+        "level": {
+          "val": "80"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+        "3232": 3
+      },
+      "skillDepotId": 3201,
+      "sortableType": "bennett",
+      "stats": {
+        "critRate": {
+          "value": 0.29610025140863
+        },
+        "critDamage": {
+          "value": 0.834100239010864
+        },
+        "energyRecharge": {
+          "value": 2.53810023519617
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 39.629997484418
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 25703.611328356
+        },
+        "atk": {
+          "value": 1095.61743187163
+        },
+        "def": {
+          "value": 1110.45239280913
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_01.png",
+          "level": 3,
+          "rawLevel": 3,
+          "id": 10321,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Bennett_01.png",
+          "level": 7,
+          "rawLevel": 4,
+          "id": 10322,
+          "boosted": true
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Bennett_01.png",
+          "level": 7,
+          "rawLevel": 7,
+          "id": 10323,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 80,
+          "promoteLevel": 5,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Sword_Dvalin"
+          }
+        },
+        "name": "Skyward Blade",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Sword_Dvalin_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Bennett.png",
+      "index": 9,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Pyro"
+      }
+    },
+    {
+      "_id": "67643be5a9ccbb26872d654c",
+      "uid": "772493838",
+      "characterId": 10000103,
+      "type": "current",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "DEF%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "DEF%"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "DEF%"
+        }
+      },
+      "artifactSets": {
+        "Scroll of the Hero of Cinder City": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15037_4.png",
+          "count": 5
+        }
+      },
+      "constellation": 0,
+      "costumeId": "",
+      "critValue": 61.4199993260697,
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "lastBuildUpdate": 1745064725080,
+      "md5": "0771308336219fb2e426aa370b100640",
+      "name": "Xilonen",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "5"
+        },
+        "level": {
+          "val": "80"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 10301,
+      "sortableType": "xilonen",
+      "stats": {
+        "critRate": {
+          "value": 0.217200840313777
+        },
+        "critDamage": {
+          "value": 0.779800842006549
+        },
+        "energyRecharge": {
+          "value": 1.20070088883196
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 62.9399956562117
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 18565.6953133442
+        },
+        "atk": {
+          "value": 831.6474617817
+        },
+        "def": {
+          "value": 3073.77978600045
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_01.png",
+          "level": 2,
+          "rawLevel": 2,
+          "id": 11031,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Xilonen_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 11032,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Xilonen_01.png",
+          "level": 6,
+          "rawLevel": 6,
+          "id": 11035,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 80,
+          "promoteLevel": 5,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Sword_Isikhulu"
+          }
+        },
+        "name": "Flute of Ezpitzal",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Sword_Isikhulu_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Xilonen.png",
+      "index": 10,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Geo"
+      }
+    },
+    {
+      "_id": "67643be5a9ccbb26872d6550",
+      "type": "current",
+      "uid": "772493838",
+      "characterId": 10000030,
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "HP%"
+        }
+      },
+      "artifactSets": {
+        "Tenacity of the Millelith": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15017_4.png",
+          "count": 5
+        }
+      },
+      "constellation": 0,
+      "costumeId": "",
+      "critValue": 61.4099988739215,
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "lastBuildUpdate": 1737926190884,
+      "md5": "a56f3b6696b49f7071ca4b0520064da2",
+      "name": "Zhongli",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "5"
+        },
+        "level": {
+          "val": "80"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 3001,
+      "sortableType": "zhongli",
+      "stats": {
+        "critRate": {
+          "value": 0.213300193401479
+        },
+        "critDamage": {
+          "value": 0.787500212641858
+        },
+        "energyRecharge": {
+          "value": 1.42740018174281
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 130.540008733722
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0.216000194402837
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 44549.4765626888
+        },
+        "atk": {
+          "value": 969.545044134113
+        },
+        "def": {
+          "value": 861.5947267513
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_03.png",
+          "level": 1,
+          "rawLevel": 1,
+          "id": 10301,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Zhongli_01.png",
+          "level": 8,
+          "rawLevel": 8,
+          "id": 10302,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Zhongli_01.png",
+          "level": 6,
+          "rawLevel": 6,
+          "id": 10303,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 80,
+          "promoteLevel": 5,
+          "refinementLevel": {
+            "value": 4
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Noire"
+          }
+        },
+        "name": "Black Tassel",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Noire_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Zhongli.png",
+      "index": 11,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Geo"
+      }
+    },
+    {
+      "_id": "67643be5a9ccbb26872d6552",
+      "type": "current",
+      "uid": "772493838",
+      "characterId": 10000090,
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Healing Bonus"
+        }
+      },
+      "artifactSets": {
+        "Song of Days Past": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15033_4.png",
+          "count": 4
+        },
+        "Emblem of Severed Fate": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 6,
+      "costumeId": "",
+      "critValue": 54.4200005989125,
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "lastBuildUpdate": 1744703516561,
+      "md5": "d565dc9e38d0e725a777250b9dabe1cc",
+      "name": "Chevreuse",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "5"
+        },
+        "level": {
+          "val": "80"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+        "9032": 3,
+        "9039": 3
+      },
+      "skillDepotId": 9001,
+      "sortableType": "chevreuse",
+      "stats": {
+        "critRate": {
+          "value": 0.209400282388019
+        },
+        "critDamage": {
+          "value": 0.725400255208301
+        },
+        "energyRecharge": {
+          "value": 1.38210027027636
+        },
+        "healingBonus": {
+          "value": 0.50900028753786
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 118.889999673848
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 31010.4199221592
+        },
+        "atk": {
+          "value": 890.65771512795
+        },
+        "def": {
+          "value": 756.236084268575
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_03.png",
+          "level": 2,
+          "rawLevel": 2,
+          "id": 10901,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Chevreuse_01.png",
+          "level": 9,
+          "rawLevel": 6,
+          "id": 10902,
+          "boosted": true
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Chevreuse_01.png",
+          "level": 9,
+          "rawLevel": 6,
+          "id": 10905,
+          "boosted": true
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 80,
+          "promoteLevel": 5,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Vorpal"
+          }
+        },
+        "name": "Rightful Reward",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Vorpal_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Chevreuse.png",
+      "index": 12,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Pyro"
+      }
+    },
+    {
+      "_id": "67643be5a9ccbb26872d6556",
+      "characterId": 10000036,
+      "type": "current",
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "ATK%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "Cryo DMG Bonus"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Crit RATE"
+        }
+      },
+      "artifactSets": {
+        "Blizzard Strayer": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_14001_4.png",
+          "count": 2
+        },
+        "Scroll of the Hero of Cinder City": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15037_4.png",
+          "count": 1
+        },
+        "Wanderer's Troupe": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15003_4.png",
+          "count": 1
+        },
+        "Emblem of Severed Fate": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15020_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 0,
+      "costumeId": "",
+      "critValue": 47.7900006979611,
+      "fetterInfo": {
+        "expLevel": 6
+      },
+      "lastBuildUpdate": 1734622181407,
+      "md5": "205a2ee05ec1118314e3dde50c63930b",
+      "name": "Chongyun",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "4"
+        },
+        "level": {
+          "val": "70"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 3601,
+      "sortableType": "chongyun",
+      "stats": {
+        "critRate": {
+          "value": 0.208100381484306
+        },
+        "critDamage": {
+          "value": 0.661700385799683
+        },
+        "energyRecharge": {
+          "value": 1.43230165838269
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 80.6699985444453
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0.213000375023163
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 12730.8671878755
+        },
+        "atk": {
+          "value": 1145.73486365675
+        },
+        "def": {
+          "value": 587.924011605969
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_04.png",
+          "level": 5,
+          "rawLevel": 5,
+          "id": 10401,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Chongyun_01.png",
+          "level": 4,
+          "rawLevel": 4,
+          "id": 10402,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Chongyun_01.png",
+          "level": 4,
+          "rawLevel": 4,
+          "id": 10403,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 70,
+          "promoteLevel": 4,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Claymore_Fossil"
+          }
+        },
+        "name": "Sacrificial Greatsword",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Claymore_Fossil_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Chongyun.png",
+      "index": 13,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Cryo"
+      }
+    },
+    {
+      "_id": "67b4eee8c7eb82716302dc24",
+      "type": "current",
+      "characterId": 10000014,
+      "uid": "772493838",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "HP%"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "Healing Bonus"
+        }
+      },
+      "artifactSets": {
+        "Song of Days Past": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15033_4.png",
+          "count": 2
+        },
+        "Maiden Beloved": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_14004_4.png",
+          "count": 2
+        },
+        "Marechaussee Hunter": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15031_4.png",
+          "count": 1
+        }
+      },
+      "constellation": 2,
+      "costumeId": "",
+      "critValue": 43.5199998397859,
+      "fetterInfo": {
+        "expLevel": 5
+      },
+      "lastBuildUpdate": 1744703516568,
+      "md5": "d2ef0ad8fbb6024e17950edc49f538c9",
+      "name": "Barbara",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "4"
+        },
+        "level": {
+          "val": "60"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 1401,
+      "sortableType": "barbara",
+      "stats": {
+        "critRate": {
+          "value": 0.135500379327116
+        },
+        "critDamage": {
+          "value": 0.76420035255271
+        },
+        "energyRecharge": {
+          "value": 1.22670032871085
+        },
+        "healingBonus": {
+          "value": 0.659000419500647
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 114.229996107939
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 22606.3593753804
+        },
+        "atk": {
+          "value": 819.124939345244
+        },
+        "def": {
+          "value": 665.270325087431
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_Catalyst_MD.png",
+          "level": 1,
+          "rawLevel": 1,
+          "id": 10070,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Barbara_01.png",
+          "level": 6,
+          "rawLevel": 6,
+          "id": 10071,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Barbara_01.png",
+          "level": 4,
+          "rawLevel": 4,
+          "id": 10072,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 80,
+          "promoteLevel": 5,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Catalyst_Proto"
+          }
+        },
+        "name": "Prototype Amber",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Proto_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Barbara.png",
+      "index": 14,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Hydro"
+      }
+    },
+    {
+      "_id": "68039315827b14510fa02c5c",
+      "characterId": 10000110,
+      "uid": "772493838",
+      "type": "current",
+      "artifactObjects": {
+        "EQUIP_SHOES": {
+          "mainStatKey": "Energy Recharge"
+        },
+        "EQUIP_RING": {
+          "mainStatKey": "ATK%"
+        },
+        "EQUIP_DRESS": {
+          "mainStatKey": "ATK%"
+        }
+      },
+      "artifactSets": {
+        "Scroll of the Hero of Cinder City": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15037_4.png",
+          "count": 3
+        },
+        "Shimenawa's Reminiscence": {
+          "icon": "https://enka.network/ui/UI_RelicIcon_15019_4.png",
+          "count": 2
+        }
+      },
+      "constellation": 2,
+      "costumeId": "",
+      "critValue": 24.8699998519417,
+      "fetterInfo": {
+        "expLevel": 3
+      },
+      "lastBuildUpdate": 1745064725122,
+      "md5": "04f5d43c6b88a7bf30302d70247eae17",
+      "name": "Iansan",
+      "owner": {
+        "nickname": "Makino",
+        "adventureRank": 57.0000001667,
+        "profilePicture": {
+          "characterId": 0,
+          "id": 100030,
+          "assets": {
+            "icon": "UI_AvatarIcon_72173_Circle",
+            "oldIcon": "UI_AvatarIcon_72173_Circle"
+          },
+          "name": null
+        },
+        "nameCard": "UI_NameCardPic_Oraionokami_P",
+        "patreon": {
+
+        },
+        "region": "EU",
+        "enkaOwner": {
+
+        }
+      },
+      "propMap": {
+        "ascension": {
+          "val": "5"
+        },
+        "level": {
+          "val": "80"
+        }
+      },
+      "proudSkillExtraLevelMap": {
+
+      },
+      "skillDepotId": 11001,
+      "sortableType": "iansan",
+      "stats": {
+        "critRate": {
+          "value": 0.0772001928683113
+        },
+        "critDamage": {
+          "value": 0.6943001857992
+        },
+        "energyRecharge": {
+          "value": 1.60670120632609
+        },
+        "healingBonus": {
+          "value": 0
+        },
+        "incomingHealingBonus": {
+          "value": 0
+        },
+        "elementalMastery": {
+          "value": 0
+        },
+        "physicalDamageBonus": {
+          "value": 0
+        },
+        "geoDamageBonus": {
+          "value": 0
+        },
+        "cryoDamageBonus": {
+          "value": 0
+        },
+        "pyroDamageBonus": {
+          "value": 0
+        },
+        "anemoDamageBonus": {
+          "value": 0
+        },
+        "hydroDamageBonus": {
+          "value": 0
+        },
+        "dendroDamageBonus": {
+          "value": 0
+        },
+        "electroDamageBonus": {
+          "value": 0
+        },
+        "maxHp": {
+          "value": 16556.1171876899
+        },
+        "atk": {
+          "value": 1298.2695314399
+        },
+        "def": {
+          "value": 738.477356146931
+        }
+      },
+      "talentsLevelMap": {
+        "normalAttacks": {
+          "icon": "https://enka.network/ui/Skill_A_03.png",
+          "level": 1,
+          "rawLevel": 1,
+          "id": 11101,
+          "boosted": false
+        },
+        "elementalSkill": {
+          "icon": "https://enka.network/ui/Skill_S_Iansan_01.png",
+          "level": 1,
+          "rawLevel": 1,
+          "id": 11102,
+          "boosted": false
+        },
+        "elementalBurst": {
+          "icon": "https://enka.network/ui/Skill_E_Iansan_01.png",
+          "level": 6,
+          "rawLevel": 6,
+          "id": 11105,
+          "boosted": false
+        }
+      },
+      "weapon": {
+        "weaponInfo": {
+          "level": 50,
+          "promoteLevel": 3,
+          "refinementLevel": {
+            "value": 4
+          }
+        },
+        "flat": {
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Aoandon"
+          }
+        },
+        "name": "Tamayuratei no Ohanashi",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Aoandon_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Iansan.png",
+      "index": 15,
+      "nameCardLink": "https://enka.network/ui/UI_NameCardPic_Oraionokami_P.png",
+      "profilePictureLink": "https://enka.network/ui/UI_AvatarIcon_72173_Circle.png",
+      "characterMetadata": {
+        "element": "Electro"
+      }
+    }
+  ],
+  "totalRowsHash": "4e640182deb90aff64cd1da54e3265fc"
+}

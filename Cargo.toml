@@ -1,0 +1,15 @@
+[package]
+name = "genshin-viewer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.22"
+egui = "0.22"
+egui_extras = { version = "0.22", features = ["image"] }
+colored = "2.0"
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full", "rt-multi-thread"] }
+image = { version = "0.24", features = ["jpeg", "png"] }
