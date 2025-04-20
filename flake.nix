@@ -30,26 +30,34 @@
           glibc
         ];
       in {
-        packages.x86_64-linux = with nixpkgs.pkgs; rec {
-          akasha = stdenv.mkDerivation rec {
+        packages.default = pkgs.stdenv.mkDerivation rec {
             pname = "akasha";
-            version = "1.0.0";
+            version = "0.0.1";
 
-            src = fetchFromGitHub {
-              owner = "kevinj045";
-              repo = "akasha-rust";
-              rev = "v1.0.0"; # Tag that corresponds to the release
-              sha256 = "0d197ae735ad26c6446265b0bc3168fde4f1fac5890e1f8d3b137b4b53fc22cd"; # You can get this from `nix-prefetch-url` or `nix-prefetch-git`
+            src = pkgs.fetchurl {
+              url = "https://github.com/kevinJ045/akasha-rust/releases/download/v0.0.1/v0.0.1-linux.tar.gz";
+              sha256 = "0zjrr3w51plakpjsh82rrb3w17h5vlfxzmxaxmr9niwqw5yj176c";
             };
+
+            sourceRoot = ".";
 
             buildInputs = libraries;
+            nativeBuildInputs = [ pkgs.makeWrapper ];
 
-            meta = with lib; {
+            installPhase = ''
+              mkdir -p $out/bin
+              cp bin/genshin-viewer $out/bin/akasha
+              chmod +x $out/bin/akasha
+
+              wrapProgram $out/bin/akasha \
+                --set LD_LIBRARY_PATH ${pkgs.lib.makeLibraryPath libraries}
+            '';
+
+            meta = {
               description = "Akasha.cv desktop app";
-              platforms = platforms.linux;
+              platforms = pkgs.lib.platforms.linux;
             };
           };
-        };
 
         devShells.default =
           pkgs.mkShell {
