@@ -50,52 +50,103 @@ struct MyApp {
 	icons: Arc<Mutex<HashMap<String, CharacterIcon>>>,
 	runtime: Arc<tokio::runtime::Runtime>,
 	stat_icons: StatIcons,
+	uid: Option<String>,
+	uid_input: String,
 }
 
 impl MyApp {
 	fn new(cc: &CreationContext) -> Self {
 		let (tx, rx) = channel();
-		let tx_clone = tx.clone();
-
-		// Create a new runtime for the background thread
 		let rt = tokio::runtime::Runtime::new().unwrap();
-
-		std::thread::spawn(move || {
-			rt.block_on(async {
-				let uid = "772493838";
-				match (
-					utils::get_user_builds(uid).await,
-					utils::get_user_calculations(uid).await,
-				) {
-					(Ok(chars), Ok(calcs)) => {
-						if let Some(char_array) = chars.as_array() {
-							tx_clone.send(Ok((char_array.to_vec(), calcs))).unwrap();
-						}
-					}
-					_ => tx_clone
-						.send(Err("Failed to fetch data".to_string()))
-						.unwrap(),
-				}
-			});
-		});
-
-		// Create another runtime for icon loading
-		let rt = tokio::runtime::Runtime::new().unwrap();
-		let rt = Arc::new(rt);
-		let rt_clone = rt.clone();
-
-		Self {
+		
+		// Try to load saved UID
+		let uid = std::fs::read_to_string("saved_uid.txt").ok();
+		
+		let mut app = Self {
 			characters: None,
 			calculations: None,
 			selected_character: None,
-			loading: true,
+			loading: false,
 			error: None,
 			rx,
-			tx,
+			tx: tx.clone(),
 			icons: Arc::new(Mutex::new(HashMap::new())),
-			runtime: rt, // Add this field to store the runtime
+			runtime: Arc::new(rt),
 			stat_icons: StatIcons::new(),
+			uid,
+			uid_input: String::new(),
+		};
+		
+		// If we have a saved UID, load the data
+		if app.uid.is_some() {
+			app.load_data();
 		}
+		
+		app
+	}
+
+	fn load_data(&mut self) {
+		if let Some(uid) = &self.uid {
+			self.loading = true;
+			let uid_clone = uid.clone();
+			let rt = tokio::runtime::Runtime::new().unwrap();
+			let tx = self.tx.clone();
+
+			std::thread::spawn(move || {
+				rt.block_on(async {
+					match (
+						utils::get_user_builds(&uid_clone).await,
+						utils::get_user_calculations(&uid_clone).await,
+					) {
+						(Ok(chars), Ok(calcs)) => {
+							if let Some(char_array) = chars.as_array() {
+								tx.send(Ok((char_array.to_vec(), calcs))).unwrap();
+							}
+						}
+						_ => tx
+							.send(Err("Failed to fetch data".to_string()))
+							.unwrap(),
+					}
+				});
+			});
+			
+			// self.runtime.spawn(async move {
+			// 	match (
+			// 		utils::get_user_builds(&uid_clone).await,
+			// 		utils::get_user_calculations(&uid_clone).await,
+			// 	) {
+			// 		(Ok(chars), Ok(calcs)) => {
+			// 			if let Some(char_array) = chars.as_array() {
+			// 				tx.send(Ok((char_array.to_vec(), calcs))).unwrap();
+			// 			}
+			// 		}
+			// 		_ => tx.send(Err("Failed to fetch data".to_string())).unwrap(),
+			// 	}
+			// });
+		}
+	}
+
+	async fn refresh_data(&self) -> Result<(), Box<dyn std::error::Error>> {
+		if let Some(uid) = &self.uid {
+			let url = format!("https://akasha.cv/api/user/refresh/{}", uid);
+			reqwest::get(&url).await?;
+		}
+		Ok(())
+	}
+
+	fn save_uid(&self) {
+		if let Some(uid) = &self.uid {
+			std::fs::write("saved_uid.txt", uid).ok();
+		}
+	}
+
+	fn logout(&mut self) {
+		self.uid = None;
+		self.characters = None;
+		self.calculations = None;
+		self.selected_character = None;
+		self.uid_input.clear();
+		std::fs::remove_file("saved_uid.txt").ok();
 	}
 
 	async fn load_icon(url: &str) -> Result<RetainedImage, Box<dyn std::error::Error>> {
@@ -681,7 +732,31 @@ impl MyApp {
 
 impl App for MyApp {
 	fn update(&mut self, ctx: &egui::Context, _frame: &mut Frame) {
-		// First, handle any pending loading results
+		if self.uid.is_none() {
+			// Show UID input dialog
+			egui::CentralPanel::default().show(ctx, |ui| {
+				ui.vertical_centered(|ui| {
+					ui.add_space(100.0);
+					ui.heading("Enter your Genshin Impact UID");
+					ui.add_space(20.0);
+					
+					let text_edit = ui.add(egui::TextEdit::singleline(&mut self.uid_input)
+						.hint_text("Enter UID...")
+						.desired_width(200.0));
+					
+					if text_edit.lost_focus() && ui.input(|i| i.key_pressed(egui::Key::Enter)) {
+						if !self.uid_input.is_empty() {
+							self.uid = Some(self.uid_input.clone());
+							self.save_uid();
+							self.load_data();
+						}
+					}
+				});
+			});
+			return;
+		}
+
+		// Handle loading results
 		if self.loading {
 			if let Ok(result) = self.rx.try_recv() {
 				match result {
@@ -698,84 +773,82 @@ impl App for MyApp {
 			}
 		}
 
-		// Create a full-screen background panel
-		egui::CentralPanel::default()
-			.frame(egui::Frame::none())
-			.show(ctx, |ui| {
-				let screen_rect = ui.max_rect();
-
-				// If we have a selected character, render the background first
-				if let Some(idx) = self.selected_character {
-					if let Some(chars) = &self.characters {
-						if let Some(char) = chars.get(idx) {
-							let element = char["characterMetadata"]["element"]
-								.as_str()
-								.unwrap_or("")
-								.to_lowercase();
-							
-							let bg_url = format!("https://akasha.cv/elementalBackgrounds/{}-bg.jpg", 
-								element.chars().next().map(|c| c.to_uppercase().collect::<String>()).unwrap_or_default() + &element[1..]);
-							self.ensure_icon(&bg_url);
-
-							// Paint background if available
-							if let Some(bg) = self.icons.lock().unwrap().get(&bg_url) {
-								if !bg.loading && !bg.error {
-									let img_size = bg.texture.size_vec2();
-									let img_aspect = img_size.x / img_size.y;
-									let rect_aspect = screen_rect.width() / screen_rect.height();
-									
-									let uv_rect = if img_aspect > rect_aspect {
-										// Image is wider than container - crop sides
-										let uv_width = rect_aspect / img_aspect;
-										let uv_x = (1.0 - uv_width) / 2.0;
-										egui::Rect::from_min_max(
-											egui::pos2(uv_x, 0.0),
-											egui::pos2(uv_x + uv_width, 1.0)
-										)
-									} else {
-										// Image is taller than container - crop top/bottom
-										let uv_height = img_aspect / rect_aspect;
-										let uv_y = (1.0 - uv_height) / 2.0;
-										egui::Rect::from_min_max(
-											egui::pos2(0.0, uv_y),
-											egui::pos2(1.0, uv_y + uv_height)
-										)
-									};
-
-									ui.painter().image(
-										bg.texture.texture_id(ui.ctx()),
-										screen_rect,
-										uv_rect,
-										egui::Color32::WHITE,
-									);
-									
-									// Add overlay
-									ui.painter().rect_filled(
-										screen_rect,
-										0.0,
-										egui::Color32::from_black_alpha(180),
-									);
-								}
-							}
-						}
-					}
-				}
-			});
-
-		// Then render the panels on top
+		// Main UI
 		egui::SidePanel::left("character_list")
 			.default_width(200.0)
 			.show(ctx, |ui| {
-				ui.heading("Characters");
-				if self.loading {
-					ui.spinner();
-				} else if let Some(error) = &self.error {
-					ui.colored_label(egui::Color32::RED, error);
-				} else {
-					self.render_character_list(ui);
-				}
+				ui.vertical(|ui| {
+					ui.heading("Characters");
+					
+					// Add refresh and logout buttons
+					if ui.button("🔄 Refresh").clicked() {
+						let runtime = self.runtime.clone();
+						let tx = self.tx.clone();
+						let rt = tokio::runtime::Runtime::new().unwrap();
+						if let Some(uid) = &self.uid {
+							let uid_clone = uid.clone();
+							self.loading = true;
+							// let tx = self.tx.clone();
+
+							std::thread::spawn(move || {
+								rt.block_on(async {
+									match (
+										utils::get_user_builds(&uid_clone).await,
+										utils::get_user_calculations(&uid_clone).await,
+									) {
+										(Ok(chars), Ok(calcs)) => {
+											if let Some(char_array) = chars.as_array() {
+												tx.send(Ok((char_array.to_vec(), calcs))).unwrap();
+											}
+										}
+										_ => tx
+											.send(Err("Failed to fetch data".to_string()))
+											.unwrap(),
+									}
+								});
+							});
+							// runtime.spawn(async move {
+							// 	match utils::refresh_user(&uid_clone).await {
+							// 		Ok(()) => {
+							// 			// Wait a bit for the refresh to take effect
+							// 			tokio::time::sleep(tokio::time::Duration::from_secs(2)).await;
+										
+							// 			match (
+							// 				utils::get_user_builds(&uid_clone).await,
+							// 				utils::get_user_calculations(&uid_clone).await,
+							// 			) {
+							// 				(Ok(chars), Ok(calcs)) => {
+							// 					if let Some(char_array) = chars.as_array() {
+							// 						tx.send(Ok((char_array.to_vec(), calcs))).unwrap();
+							// 					}
+							// 				}
+							// 				_ => tx.send(Err("Failed to fetch data".to_string())).unwrap(),
+							// 			}
+							// 		}
+							// 		Err(e) => tx.send(Err(format!("Failed to refresh: {}", e))).unwrap(),
+							// 	}
+							// });
+						}
+					}
+					
+					if ui.button("🚪 Logout").clicked() {
+						self.logout();
+						return;
+					}
+					
+					ui.separator();
+					
+					if self.loading {
+						ui.spinner();
+					} else if let Some(error) = &self.error {
+						ui.colored_label(egui::Color32::RED, error);
+					} else {
+						self.render_character_list(ui);
+					}
+				});
 			});
 
+		// Then render the panels on top
 		egui::CentralPanel::default().show(ctx, |ui| {
 			if self.loading {
 				ui.spinner();

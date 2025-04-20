@@ -45,3 +45,11 @@ pub async fn get_user_builds(user_id: &str) -> Result<Value, Box<dyn Error>> {
     let data = response.json::<Value>().await?;
     Ok(data["data"].clone())
 }
+
+pub async fn refresh_user(user_id: &str) -> Result<(), String> {
+    let url = api_url(&format!("/user/refresh/{}", user_id));
+    reqwest::get(&url)
+        .await
+        .map_err(|e| e.to_string())?;
+    Ok(())
+}
