@@ -6,12 +6,38 @@ use serde_json::Value;
 use std::collections::HashMap;
 use std::sync::mpsc::{channel, Receiver, Sender};
 use std::sync::{Arc, Mutex};
+mod icons;
 
 struct CharacterIcon {
 	texture: RetainedImage,
 	loading: bool,
 	error: bool,
 }
+
+struct StatIcons {
+	hp: RetainedImage,
+	atk: RetainedImage,
+	def: RetainedImage,
+	crit_rate: RetainedImage,
+	crit_dmg: RetainedImage,
+	er: RetainedImage,
+	em: RetainedImage,
+}
+
+impl StatIcons {
+	fn new() -> Self {
+		Self {
+			hp: RetainedImage::from_image_bytes("hp_icon", include_bytes!("../assets/icons/hp.png")).unwrap(),
+			atk: RetainedImage::from_image_bytes("atk_icon", include_bytes!("../assets/icons/atk.png")).unwrap(),
+			def: RetainedImage::from_image_bytes("def_icon", include_bytes!("../assets/icons/def.png")).unwrap(),
+			crit_rate: RetainedImage::from_image_bytes("crit_rate_icon", include_bytes!("../assets/icons/crit_rate.png")).unwrap(),
+			crit_dmg: RetainedImage::from_image_bytes("crit_dmg_icon", include_bytes!("../assets/icons/crit_dmg.png")).unwrap(),
+			er: RetainedImage::from_image_bytes("er_icon", include_bytes!("../assets/icons/er.png")).unwrap(),
+			em: RetainedImage::from_image_bytes("em_icon", include_bytes!("../assets/icons/em.png")).unwrap(),
+		}
+	}
+}
+
 
 struct MyApp {
 	characters: Option<Vec<Value>>,
@@ -23,6 +49,7 @@ struct MyApp {
 	tx: Sender<Result<(Vec<Value>, Value), String>>,
 	icons: Arc<Mutex<HashMap<String, CharacterIcon>>>,
 	runtime: Arc<tokio::runtime::Runtime>,
+	stat_icons: StatIcons,
 }
 
 impl MyApp {
@@ -67,6 +94,7 @@ impl MyApp {
 			tx,
 			icons: Arc::new(Mutex::new(HashMap::new())),
 			runtime: rt, // Add this field to store the runtime
+			stat_icons: StatIcons::new(),
 		}
 	}
 
@@ -209,97 +237,297 @@ impl MyApp {
 		}
 	}
 
+	fn render_constellations(&self, ui: &mut egui::Ui, short_name: &str, constellation: i64) {
+		ui.vertical(|ui| {
+			for i in 1..=6 {
+				let cons_url = format!("https://enka.network/ui/UI_Talent_S_{}_{:02}.png", short_name, i);
+				self.ensure_icon(&cons_url);
+
+				if let Some(icon) = self.icons.lock().unwrap().get(&cons_url) {
+					let size = 48.0;
+					
+					if i <= constellation {
+						icon.texture.show_size(ui, egui::vec2(size, size));
+					}
+				}
+				ui.add_space(4.0); // Small space between constellation icons
+			}
+		});
+	}
+
+	fn find_by_character_id(&self, target_id: i64) -> Option<&Value> {
+		self.calculations.as_ref().and_then(|calcs| {
+			calcs.as_array()?.iter().find(|calc| {
+				calc["characterId"].as_i64() == Some(target_id)
+			})
+		})
+	}
+
 	fn render_character_details(&self, ui: &mut egui::Ui) {
 		if let Some(idx) = self.selected_character {
 			if let Some(chars) = &self.characters {
 				if let Some(char) = chars.get(idx) {
-					if let Some(calcs) = &self.calculations {
-						let char_calcs = calcs
-							.as_object()
-							.and_then(|obj| obj.get(&char["characterId"].to_string()))
-							.and_then(|calc| calc.as_object());
+					// Get character name and constellation level
+					let name = char["name"].as_str().unwrap_or("Unknown");
+					let constellation = char["constellation"].as_i64().unwrap_or(0);
+					let short_name = char.get("icon")
+						.and_then(|i| i.as_str())
+						.unwrap()
+						.rsplit('_')
+						.next()
+						.and_then(|part| part.split('.').next())
+						.unwrap();
 
-						let full_height = ui.available_height();
+					// println!("{}", serde_json::to_string_pretty(&char).unwrap());
 
-						ui.horizontal(|ui| {
-							// Left panel for avatar (40% width)
-							ui.allocate_ui_with_layout(
-								egui::vec2(ui.available_width() * 0.6, ui.available_height()),
-								egui::Layout::top_down(egui::Align::Center),
-								|ui| {
-									if let Some(name) = char.get("name").and_then(|i| i.as_str()) {
-										let icon_url = format!("https://enka.network/ui/UI_Gacha_AvatarImg_{}.png", name);
-										self.ensure_icon(&icon_url);
+					// Create right-side overlay for constellations and name
+					let screen_rect = ui.max_rect();
+					
+					// Constellation panel - center-right
+					let cons_width = 64.0;
+					let cons_rect = egui::Rect::from_min_max(
+						egui::pos2(screen_rect.right() - cons_width - 20.0, screen_rect.center().y - 180.0),
+						egui::pos2(screen_rect.right() - 20.0, screen_rect.center().y + 180.0),
+					);
+					
+					// Name panel - bottom-right
+					let name_height = 40.0;
+					let name_rect = egui::Rect::from_min_max(
+						egui::pos2(screen_rect.right() - 300.0, screen_rect.bottom() - name_height - 20.0),
+						egui::pos2(screen_rect.right() - 20.0, screen_rect.bottom() - 20.0),
+					);
+					let ranking_height = 40.0;
+					let ranking_rect = egui::Rect::from_min_max(
+						egui::pos2(screen_rect.right() - 300.0, screen_rect.top() + ranking_height + 20.0),
+						egui::pos2(screen_rect.right() - 20.0, screen_rect.bottom() - 20.0),
+					);
 
-										if let Some(icon) = self.icons.lock().unwrap().get(&icon_url) {
-											if !icon.loading && !icon.error {
-												let available_width = ui.available_width();
-												let available_height = ui.available_height();
+					// Render constellations
+					let cons_response = egui::Area::new("constellations")
+						.fixed_pos(cons_rect.min)
+						.show(ui.ctx(), |ui| {
+							self.render_constellations(ui, short_name, constellation);
+						});
 
-												egui::Frame::none()
-													.inner_margin(0.0)
-													.show(ui, |ui| {
-														egui::ScrollArea::neither()
-															.max_height(available_height)
-															.show(ui, |ui| {
-																let image_size = icon.texture.size_vec2();
-																let aspect_ratio = image_size.y / image_size.x;
-																let display_width = available_width;
-																let display_height = display_width * aspect_ratio;
+					// Render name
+					egui::Area::new("character_name")
+						.fixed_pos(name_rect.min)
+						.show(ui.ctx(), |ui| {
+							ui.heading(egui::RichText::new(name)
+								.size(32.0)
+								.strong());
+						});
 
-																icon.texture.show_size(ui, egui::vec2(display_width, display_height));
-															});
-													});
-											} else if icon.loading {
-												ui.spinner();
-												ui.label("Loading character art...");
-											} else {
-												ui.label("Failed to load character art");
-											}
+					// Render Ranking
+					egui::Area::new("ranking")
+						.fixed_pos(ranking_rect.min)
+						.show(ui.ctx(), |ui| {
+							// println!("Character data: {:#?}", char);  // Debug print the entire character data
+							
+							if let Some(char_id) = char["characterId"].as_i64() {
+								if let Some(calculation) = self.find_by_character_id(char_id) {
+									// println!("Found calculation: {:#?}", calculation);
+									
+									if let Some(calc) = calculation.get("calculations").and_then(|c| c.get("fit")).and_then(|f| f.as_object()) {
+										// println!("{:#?}", calc);
+										if let (Some(rank), Some(total)) = (
+											calc.get("ranking").and_then(|v| v.as_i64()),
+											calc.get("outOf").and_then(|v| v.as_i64())
+										) {
+											let percentage = (rank as f64 / total as f64 * 100.0) as i64;
+											ui.heading(egui::RichText::new(
+												format!("Top {}% ({}/{})", percentage, rank, total)
+											)
+												.size(22.0)
+												.strong());
 										}
 									}
+								} else {
+									println!("No calculation found for character ID: {}", char_id);
 								}
-							);
+							} else {
+								println!("Could not find characterId as number in: {:#?}", char.get("characterId"));
+							}
+						});
 
-							// Right panel for character details (60% width)
-							ui.vertical(|ui| {
-								egui::Grid::new("character_details_grid")
-									.num_columns(2)
-									.spacing([20.0, 20.0])
-									.min_col_width(200.0)
-									.show(ui, |ui| {
+					let element = char["characterMetadata"]["element"]
+						.as_str()
+						.unwrap_or("")
+						.to_lowercase();
+					
+					let bg_url = format!("https://akasha.cv/elementalBackgrounds/{}-bg.jpg", 
+						element.chars().next().map(|c| c.to_uppercase().collect::<String>()).unwrap_or_default() + &element[1..]);
+					self.ensure_icon(&bg_url);
+
+					let rect = ui.available_rect_before_wrap();
+					
+					// Paint background if available
+					if let Some(bg) = self.icons.lock().unwrap().get(&bg_url) {
+						if !bg.loading && !bg.error {
+							let img_size = bg.texture.size_vec2();
+							let img_aspect = img_size.x / img_size.y;
+							let rect_aspect = rect.width() / rect.height();
+							
+							let uv_rect = if img_aspect > rect_aspect {
+								// Image is wider than container - crop sides
+								let uv_width = rect_aspect / img_aspect;
+								let uv_x = (1.0 - uv_width) / 2.0;
+								egui::Rect::from_min_max(
+									egui::pos2(uv_x, 0.0),
+									egui::pos2(uv_x + uv_width, 1.0)
+								)
+							} else {
+								// Image is taller than container - crop top/bottom
+								let uv_height = img_aspect / rect_aspect;
+								let uv_y = (1.0 - uv_height) / 2.0;
+								egui::Rect::from_min_max(
+									egui::pos2(0.0, uv_y),
+									egui::pos2(1.0, uv_y + uv_height)
+								)
+							};
+
+							ui.painter().image(
+								bg.texture.texture_id(ui.ctx()),
+								rect,
+								uv_rect,
+								egui::Color32::WHITE,
+							);
+							
+							// Add overlay
+							ui.painter().rect_filled(
+								rect,
+								0.0,
+								egui::Color32::from_black_alpha(180),
+							);
+						}
+					}
+
+					if let Some(name) = char.get("icon").and_then(|i| i.as_str()) {
+						let icon_url = format!("https://enka.network/ui/UI_Gacha_AvatarImg_{}.png", short_name);
+						self.ensure_icon(&icon_url);
+
+						if let Some(icon) = self.icons.lock().unwrap().get(&icon_url) {
+							if !icon.loading && !icon.error {
+								// let rect = ui.available_rect_before_wrap();
+								let img_size = icon.texture.size_vec2();
+								let img_aspect = img_size.x / img_size.y;
+								let rect_aspect = rect.width() / rect.height();
+								
+								let uv_rect = if img_aspect > rect_aspect {
+									// Image is wider than container - crop sides
+									let uv_width = rect_aspect / img_aspect;
+									let uv_x = (1.0 - uv_width) / 2.0;
+									egui::Rect::from_min_max(
+										egui::pos2(uv_x, 0.0),
+										egui::pos2(uv_x + uv_width, 1.0)
+									)
+								} else {
+									// Image is taller than container - crop top/bottom
+									let uv_height = img_aspect / rect_aspect;
+									let uv_y = (1.0 - uv_height) / 2.0;
+									egui::Rect::from_min_max(
+										egui::pos2(0.0, uv_y),
+										egui::pos2(1.0, uv_y + uv_height)
+									)
+								};
+
+								ui.painter().image(
+									icon.texture.texture_id(ui.ctx()),
+									rect,
+									uv_rect,
+									egui::Color32::WHITE,
+								);
+							} else if icon.loading {
+								ui.spinner();
+								ui.label("Loading character art...");
+							} else {
+								ui.label("Failed to load character art");
+							}
+						}
+					}
+
+					let full_height = ui.available_height();
+
+					// Continue with existing UI
+					ui.horizontal(|ui| {
+						// Left panel for avatar (40% width)
+
+						// Right panel for character details (60% width)
+						egui::Frame::none()
+							.inner_margin(10.0)
+							.show(ui, |ui| {
+								ui.vertical(|ui| {
 										// Card 1: Character Info and Talents
 										{
 											egui::Frame::none()
-												.fill(ui.style().visuals.extreme_bg_color)
-												.rounding(10.0)
-												.stroke(ui.style().visuals.widgets.noninteractive.bg_stroke)
+												// .fill(ui.style().visuals.extreme_bg_color)
+												// .rounding(10.0)
+												// .stroke(ui.style().visuals.widgets.noninteractive.bg_stroke)
 												.inner_margin(10.0)
 												.show(ui, |ui| {
 													ui.set_min_width(200.0);
 													ui.vertical(|ui| {
 														ui.heading("Character Info");
 														ui.label(format!(
-															"Level {}/{}",
-															char["propMap"]["level"]["val"].as_i64().unwrap_or(0),
-															char["propMap"]["ascension"]["val"].as_i64().unwrap_or(0) * 10
+															"Level {}/90",
+															char["propMap"]["level"]["val"].as_str().unwrap()
 														));
 														ui.label(format!("Constellation: C{}", char["constellation"].as_i64().unwrap_or(0)));
 
 														ui.add_space(10.0);
 														ui.heading("Talents");
-														ui.label(format!(
-															"Normal Attack: {}",
-															char["talentsLevelMap"]["normalAttacks"]["level"].as_i64().unwrap_or(0)
-														));
-														ui.label(format!(
-															"Elemental Skill: {}",
-															char["talentsLevelMap"]["elementalSkill"]["level"].as_i64().unwrap_or(0)
-														));
-														ui.label(format!(
-															"Elemental Burst: {}",
-															char["talentsLevelMap"]["elementalBurst"]["level"].as_i64().unwrap_or(0)
-														));
+														// First get the normal attack icon based on weapon type
+														let normal_attack_icon = match char["weaponType"].as_str().unwrap_or("") {
+															"WeAPON_SWORD_ONE_HAND" => "Skill_A_01",
+															"WeAPON_BOW" => "Skill_A_02",
+															"WeAPON_POLE" => "Skill_A_03",
+															"WeAPON_CLAYMORE" => "Skill_A_04",
+															"WeAPON_CATALYST" => "Skill_A_05",
+															_ => "Skill_A_01", // default to sword if unknown
+														};
+
+														// Generate URLs for all three talent icons
+														let normal_attack_url = format!("https://enka.network/ui/{}.png", normal_attack_icon);
+														let skill_url = format!("https://enka.network/ui/Skill_S_{}_01.png", short_name);
+														let burst_url = format!("https://enka.network/ui/Skill_E_{}_01.png", short_name);
+
+														// Ensure all talent icons are loaded
+														self.ensure_icon(&normal_attack_url);
+														self.ensure_icon(&skill_url);
+														self.ensure_icon(&burst_url);
+
+														ui.horizontal(|ui| {
+															if let Some(icon) = self.icons.lock().unwrap().get(&normal_attack_url) {
+																let size = 32.0;
+																icon.texture.show_size(ui, egui::vec2(size, size));
+															}
+															ui.label(format!(
+																"Normal Attack: {}",
+																char["talentsLevelMap"]["normalAttacks"]["level"].as_i64().unwrap_or(0)
+															));
+														});
+
+														ui.horizontal(|ui| {
+															if let Some(icon) = self.icons.lock().unwrap().get(&skill_url) {
+																let size = 32.0;
+																icon.texture.show_size(ui, egui::vec2(size, size));
+															}
+															ui.label(format!(
+																"Elemental Skill: {}",
+																char["talentsLevelMap"]["elementalSkill"]["level"].as_i64().unwrap_or(0)
+															));
+														});
+
+														ui.horizontal(|ui| {
+															if let Some(icon) = self.icons.lock().unwrap().get(&burst_url) {
+																let size = 32.0;
+																icon.texture.show_size(ui, egui::vec2(size, size));
+															}
+															ui.label(format!(
+																"Elemental Burst: {}",
+																char["talentsLevelMap"]["elementalBurst"]["level"].as_i64().unwrap_or(0)
+															));
+														});
 													});
 												});
 										}
@@ -307,10 +535,10 @@ impl MyApp {
 										// Card 2: Weapon Info
 										{
 											egui::Frame::none()
-												.fill(ui.style().visuals.extreme_bg_color)
-												.rounding(10.0)
+												// .fill(ui.style().visuals.extreme_bg_color)
+												// .rounding(10.0)
 												.inner_margin(10.0)
-												.stroke(ui.style().visuals.widgets.noninteractive.bg_stroke)
+												// .stroke(ui.style().visuals.widgets.noninteractive.bg_stroke)
 												.show(ui, |ui| {
 													ui.vertical(|ui| {
 														ui.heading("Weapon");
@@ -332,9 +560,8 @@ impl MyApp {
 																weapon["weaponInfo"]["refinementLevel"]["value"].as_i64().unwrap_or(0) + 1
 															));
 															ui.label(format!(
-																"Level {}/{}",
-																weapon["weaponInfo"]["level"].as_i64().unwrap_or(0),
-																weapon["weaponInfo"]["promoteLevel"].as_i64().unwrap_or(0) * 10
+																"Level {}/90",
+																weapon["weaponInfo"]["level"].as_i64().unwrap_or(0)
 															));
 														}
 													});
@@ -346,20 +573,55 @@ impl MyApp {
 										// Card 3: Stats
 										{
 											egui::Frame::none()
-												.fill(ui.style().visuals.extreme_bg_color)
-												.rounding(10.0)
+												// .fill(ui.style().visuals.extreme_bg_color)
+												// .rounding(10.0)
 												.inner_margin(10.0)
-												.stroke(ui.style().visuals.widgets.noninteractive.bg_stroke)
+												// .stroke(ui.style().visuals.widgets.noninteractive.bg_stroke)
 												.show(ui, |ui| {
 													ui.vertical(|ui| {
 														ui.heading("Stats");
-														ui.label(format!("HP: {}", utils::format_number(char["stats"]["maxHp"]["value"].as_f64().unwrap_or(0.0))));
-														ui.label(format!("ATK: {}", utils::format_number(char["stats"]["atk"]["value"].as_f64().unwrap_or(0.0))));
-														ui.label(format!("DEF: {}", utils::format_number(char["stats"]["def"]["value"].as_f64().unwrap_or(0.0))));
-														ui.label(format!("Crit Rate: {:.1}%", char["stats"]["critRate"]["value"].as_f64().unwrap_or(0.0) * 100.0));
-														ui.label(format!("Crit DMG: {:.1}%", char["stats"]["critDamage"]["value"].as_f64().unwrap_or(0.0) * 100.0));
-														ui.label(format!("Energy Recharge: {:.1}%", char["stats"]["energyRecharge"]["value"].as_f64().unwrap_or(0.0) * 100.0));
-														ui.label(format!("Elemental Mastery: {}", char["stats"]["elementalMastery"]["value"].as_f64().unwrap_or(0.0) as i64));
+														
+														ui.horizontal(|ui| {
+															let size = 16.0;
+															self.stat_icons.hp.show_size(ui, egui::vec2(size, size));
+															ui.label(format!("HP | {}", utils::format_number(char["stats"]["maxHp"]["value"].as_f64().unwrap_or(0.0))));
+														});
+
+														ui.horizontal(|ui| {
+															let size = 16.0;
+															self.stat_icons.atk.show_size(ui, egui::vec2(size, size));
+															ui.label(format!("ATK | {}", utils::format_number(char["stats"]["atk"]["value"].as_f64().unwrap_or(0.0))));
+														});
+
+														ui.horizontal(|ui| {
+															let size = 16.0;
+															self.stat_icons.def.show_size(ui, egui::vec2(size, size));
+															ui.label(format!("DEF | {}", utils::format_number(char["stats"]["def"]["value"].as_f64().unwrap_or(0.0))));
+														});
+
+														ui.horizontal(|ui| {
+															let size = 16.0;
+															self.stat_icons.crit_rate.show_size(ui, egui::vec2(size, size));
+															ui.label(format!("Crit Rate | {:.1}%", char["stats"]["critRate"]["value"].as_f64().unwrap_or(0.0) * 100.0));
+														});
+
+														ui.horizontal(|ui| {
+															let size = 16.0;
+															self.stat_icons.crit_dmg.show_size(ui, egui::vec2(size, size));
+															ui.label(format!("Crit DMG | {:.1}%", char["stats"]["critDamage"]["value"].as_f64().unwrap_or(0.0) * 100.0));
+														});
+
+														ui.horizontal(|ui| {
+															let size = 16.0;
+															self.stat_icons.er.show_size(ui, egui::vec2(size, size));
+															ui.label(format!("Energy Recharge | {:.1}%", char["stats"]["energyRecharge"]["value"].as_f64().unwrap_or(0.0) * 100.0));
+														});
+
+														ui.horizontal(|ui| {
+															let size = 16.0;
+															self.stat_icons.em.show_size(ui, egui::vec2(size, size));
+															ui.label(format!("Elemental Mastery | {}", char["stats"]["elementalMastery"]["value"].as_f64().unwrap_or(0.0) as i64));
+														});
 													});
 												});
 										}
@@ -367,25 +629,12 @@ impl MyApp {
 										// Card 4: Artifacts and Build Quality
 										{
 											egui::Frame::none()
-												.fill(ui.style().visuals.extreme_bg_color)
-												.rounding(10.0)
+												// .fill(ui.style().visuals.extreme_bg_color)
+												// .rounding(10.0)
 												.inner_margin(10.0)
-												.stroke(ui.style().visuals.widgets.noninteractive.bg_stroke)
+												// .stroke(ui.style().visuals.widgets.noninteractive.bg_stroke)
 												.show(ui, |ui| {
 													ui.vertical(|ui| {
-														// Build Ranking (if available)
-														if let Some(calc) = char_calcs {
-															if let (Some(rank), Some(total)) = (
-																calc.get("ranking").and_then(|v| v.as_i64()),
-																calc.get("outOf").and_then(|v| v.as_i64())
-															) {
-																let percentage = (rank as f64 / total as f64 * 100.0) as i64;
-																ui.colored_label(
-																	egui::Color32::from_rgb(255, 215, 0),
-																	format!("Top {}% ({}/{})", percentage, rank, total)
-																);
-															}
-														}
 
 														ui.heading("Artifact Sets");
 														if let Some(sets) = char["artifactSets"].as_object() {
@@ -411,14 +660,19 @@ impl MyApp {
 
 														ui.add_space(10.0);
 														ui.heading("Build Quality");
-														ui.label(format!("Crit Value: {:.2}", char["critValue"].as_f64().unwrap_or(0.0)));
+														
+
+														ui.horizontal(|ui| {
+															let size = 16.0;
+															self.stat_icons.crit_dmg.show_size(ui, egui::vec2(size, size));
+															ui.label(format!("Crit Value | {:.2}", char["critValue"].as_f64().unwrap_or(0.0)));
+														});
 													});
 												});
 										}
 									});
-							});
 						});
-					}
+					});
 				}
 			}
 		}
@@ -427,6 +681,7 @@ impl MyApp {
 
 impl App for MyApp {
 	fn update(&mut self, ctx: &egui::Context, _frame: &mut Frame) {
+		// First, handle any pending loading results
 		if self.loading {
 			if let Ok(result) = self.rx.try_recv() {
 				match result {
@@ -443,6 +698,71 @@ impl App for MyApp {
 			}
 		}
 
+		// Create a full-screen background panel
+		egui::CentralPanel::default()
+			.frame(egui::Frame::none())
+			.show(ctx, |ui| {
+				let screen_rect = ui.max_rect();
+
+				// If we have a selected character, render the background first
+				if let Some(idx) = self.selected_character {
+					if let Some(chars) = &self.characters {
+						if let Some(char) = chars.get(idx) {
+							let element = char["characterMetadata"]["element"]
+								.as_str()
+								.unwrap_or("")
+								.to_lowercase();
+							
+							let bg_url = format!("https://akasha.cv/elementalBackgrounds/{}-bg.jpg", 
+								element.chars().next().map(|c| c.to_uppercase().collect::<String>()).unwrap_or_default() + &element[1..]);
+							self.ensure_icon(&bg_url);
+
+							// Paint background if available
+							if let Some(bg) = self.icons.lock().unwrap().get(&bg_url) {
+								if !bg.loading && !bg.error {
+									let img_size = bg.texture.size_vec2();
+									let img_aspect = img_size.x / img_size.y;
+									let rect_aspect = screen_rect.width() / screen_rect.height();
+									
+									let uv_rect = if img_aspect > rect_aspect {
+										// Image is wider than container - crop sides
+										let uv_width = rect_aspect / img_aspect;
+										let uv_x = (1.0 - uv_width) / 2.0;
+										egui::Rect::from_min_max(
+											egui::pos2(uv_x, 0.0),
+											egui::pos2(uv_x + uv_width, 1.0)
+										)
+									} else {
+										// Image is taller than container - crop top/bottom
+										let uv_height = img_aspect / rect_aspect;
+										let uv_y = (1.0 - uv_height) / 2.0;
+										egui::Rect::from_min_max(
+											egui::pos2(0.0, uv_y),
+											egui::pos2(1.0, uv_y + uv_height)
+										)
+									};
+
+									ui.painter().image(
+										bg.texture.texture_id(ui.ctx()),
+										screen_rect,
+										uv_rect,
+										egui::Color32::WHITE,
+									);
+									
+									// Add overlay
+									ui.painter().rect_filled(
+										screen_rect,
+										0.0,
+										egui::Color32::from_black_alpha(180),
+									);
+								}
+							}
+						}
+					}
+				}
+			});
+
+		// Then render the panels on top
 		egui::SidePanel::left("character_list")
 			.default_width(200.0)
 			.show(ctx, |ui| {

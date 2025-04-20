@@ -1,1 +1,536 @@
-{"ttl":0,"data":[{"_id":"67643be5a9ccbb26872d6554","characterId":10000023,"type":"current","uid":"772493838","artifactSets":{"Emblem of Severed Fate":{"icon":"UI_RelicIcon_15020_4","count":4},"Viridescent Venerer":{"icon":"UI_RelicIcon_15002_1","count":1}},"calculations":{"fit":{"md5":"ee4ccd1955baaa4d20551b7756ec8433","calculationId":"1000002301","short":"MONO","name":"Mono Pyro Pyronado Avg DMG","details":"c6r5 Xiangling, c6r1 Bennett, c0r1 Kazuha with 1000EM, flex pyro","weapon":{"name":"\"The Catch\"","icon":"https://enka.network/ui/UI_EquipIcon_Pole_Mori_Awaken.png","substat":"Energy Recharge","type":"Polearm","rarity":4,"refinement":5},"result":20448.21040698263,"stats":null,"ranking":254812,"outOf":498565,"priority":2,"type":"current"}},"constellation":1,"lastBuildUpdate":1743448108983,"md5":"ee4ccd1955baaa4d20551b7756ec8433","name":"Xiangling","stats":null,"weapon":{"weaponId":13415,"weaponInfo":{"level":80,"promoteLevel":5,"refinementLevel":{"value":0}},"flat":{"nameTextMapHash":"1148024603","stars":4,"weaponStats":[{"stat":"FIGHT_PROP_BASE_ATTACK","statValue":449},{"stat":"FIGHT_PROP_CHARGE_EFFICIENCY","statValue":41.9}],"itemType":"ITEM_WEAPON","icon":{"value":"UI_EquipIcon_Pole_Mori","toLink":null},"name":null},"name":"\"The Catch\"","icon":"https://enka.network/ui/UI_EquipIcon_Pole_Mori_Awaken.png"},"icon":"https://enka.network/ui/UI_AvatarIcon_Xiangling.png"},{"_id":"67643be5a9ccbb26872d6550","type":"current","uid":"772493838","characterId":10000030,"artifactSets":{"Tenacity of the Millelith":{"icon":"UI_RelicIcon_15017_4","count":5}},"calculations":{"fit":{"md5":"a56f3b6696b49f7071ca4b0520064da2","calculationId":"1000003000","short":"MAX HP","name":"Shieldbot, Max HP","details":"---","weapon":{"name":"Black Tassel","icon":"https://enka.network/ui/UI_EquipIcon_Pole_Noire_Awaken.png","substat":"HP","type":"Polearm","rarity":3,"refinement":5},"result":50390.54989603456,"stats":null,"ranking":318128,"outOf":768383,"priority":2,"type":"current"}},"constellation":0,"lastBuildUpdate":1737926190884,"md5":"a56f3b6696b49f7071ca4b0520064da2","name":"Zhongli","stats":null,"weapon":{"weaponId":13303,"weaponInfo":{"level":80,"promoteLevel":5,"refinementLevel":{"value":4}},"flat":{"nameTextMapHash":"4103766499","stars":3,"weaponStats":[{"stat":"FIGHT_PROP_BASE_ATTACK","statValue":314},{"stat":"FIGHT_PROP_HP_PERCENT","statValue":42.8}],"itemType":"ITEM_WEAPON","icon":{"value":"UI_EquipIcon_Pole_Noire","toLink":null},"name":null},"name":"Black Tassel","icon":"https://enka.network/ui/UI_EquipIcon_Pole_Noire_Awaken.png"},"icon":"https://enka.network/ui/UI_AvatarIcon_Zhongli.png"},{"_id":"67643be5a9ccbb26872d654a","characterId":10000052,"type":"current","uid":"772493838","artifactSets":{"Emblem of Severed Fate":{"icon":"UI_RelicIcon_15020_4","count":5}},"calculations":{"fit":{"md5":"d8d2dac283ec535ba67cfd5631fd5849","calculationId":"1000005203","short":"BURST","name":"National Raiden Burst, Avg DMG","details":"Musou no Hitotachi initial slash avg DMG. c0r1 Raiden, c6r5 Xingqiu, c6r5 Xiangling, c6r1 Bennett","weapon":{"name":"Engulfing Lightning","icon":"https://enka.network/ui/UI_EquipIcon_Pole_Narukami_Awaken.png","substat":"Energy Recharge","type":"Polearm","rarity":5,"refinement":1},"result":116475.50043989618,"stats":null,"ranking":306141,"outOf":1170338,"priority":2,"type":"current"}},"constellation":0,"lastBuildUpdate":1744708175784,"md5":"d8d2dac283ec535ba67cfd5631fd5849","name":"Raiden Shogun","stats":null,"weapon":{"weaponId":13509,"weaponInfo":{"level":90,"promoteLevel":6,"refinementLevel":{"value":0}},"flat":{"nameTextMapHash":"3717849275","stars":5,"weaponStats":[{"stat":"FIGHT_PROP_BASE_ATTACK","statValue":608},{"stat":"FIGHT_PROP_CHARGE_EFFICIENCY","statValue":55.1}],"itemType":"ITEM_WEAPON","icon":{"value":"UI_EquipIcon_Pole_Narukami","toLink":null},"name":null},"name":"Engulfing Lightning","icon":"https://enka.network/ui/UI_EquipIcon_Pole_Narukami_Awaken.png"},"icon":"https://enka.network/ui/UI_AvatarIcon_Shougun.png"},{"_id":"67643be5a9ccbb26872d654e","type":"current","uid":"772493838","characterId":10000087,"artifactSets":{"Marechaussee Hunter":{"icon":"UI_RelicIcon_15031_4","count":4},"Golden Troupe":{"icon":"UI_RelicIcon_15032_1","count":1}},"calculations":{"fit":{"md5":"d38795095ef4fa2f0bc51cef1a463a55","calculationId":"1000008700","short":"COMBO","name":"EQ3CA Without Buffs, Avg DMG","details":"E Q 3CA. Neuvillette + flex + flex + flex. No Hydro resonance. Assumes one of the flexes is a shielder for the sake of 4p Bolide. No other relevant team buffs. Single CA is counted as 8 damage ticks. This leaderboard works for teams with minimal buffs such as electrocharged, hyperbloom, burgeon or solo. Neuvillette averages 75% HP through the combo (relevant for A4 buff) and maintains 3 A1 stacks. 4p HoD full uptime. 4p Nymph's Dream two stacks wear off before 3rd CA. 4p MH assumes Neuvillette is below 68% HP at the beginning of combo. 4p Shimenawa is NOT considered. ","weapon":{"name":"Tome of the Eternal Flow","icon":"https://enka.network/ui/UI_EquipIcon_Catalyst_Iudex_Awaken.png","substat":"CRIT DMG","type":"Catalyst","rarity":5,"refinement":1},"result":740509.4071155014,"stats":null,"ranking":161638,"outOf":765686,"priority":1,"type":"current"}},"constellation":0,"lastBuildUpdate":1744389176347,"md5":"d38795095ef4fa2f0bc51cef1a463a55","name":"Neuvillette","stats":null,"weapon":{"weaponId":14402,"weaponInfo":{"level":90,"promoteLevel":6,"refinementLevel":{"value":0}},"flat":{"nameTextMapHash":"1163263227","stars":4,"weaponStats":[{"stat":"FIGHT_PROP_BASE_ATTACK","statValue":510},{"stat":"FIGHT_PROP_CRITICAL_HURT","statValue":55.1}],"itemType":"ITEM_WEAPON","icon":{"value":"UI_EquipIcon_Catalyst_Troupe","toLink":null},"name":null},"name":"The Widsith","icon":"https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png"},"icon":"https://enka.network/ui/UI_AvatarIcon_Neuvillette.png"},{"_id":"67dd5347827b14510f1ca88b","type":"current","characterId":10000089,"uid":"772493838","artifactSets":{"Golden Troupe":{"icon":"UI_RelicIcon_15032_4","count":4},"Marechaussee Hunter":{"icon":"UI_RelicIcon_15031_1","count":1}},"calculations":{"fit":{"md5":"a4425b1c95c06ef0e1c282d3d47934b2","calculationId":"1000008904","short":"SKILL","name":"Elemental Skill, Avg DMG","details":"Average DMG for Mademoiselle Crabaletta in a double hydro team. Number of characters who offered HP: 4. Fanfare stacks count: 200. Weapon stacks maxed when applicable. ","weapon":{"name":"Fleuve Cendre Ferryman","icon":"https://enka.network/ui/UI_EquipIcon_Sword_Machination_Awaken.png","substat":"Energy Recharge","type":"Sword","rarity":4,"refinement":5},"result":24968.920064735208,"stats":null,"ranking":44241,"outOf":1038729,"priority":2,"type":"current"}},"constellation":0,"lastBuildUpdate":1743961606232,"md5":"a4425b1c95c06ef0e1c282d3d47934b2","name":"Furina","stats":null,"weapon":{"weaponId":11426,"weaponInfo":{"level":90,"promoteLevel":6,"refinementLevel":{"value":4}},"flat":{"nameTextMapHash":"1921306659","stars":4,"weaponStats":[{"stat":"FIGHT_PROP_BASE_ATTACK","statValue":510},{"stat":"FIGHT_PROP_CHARGE_EFFICIENCY","statValue":45.9}],"itemType":"ITEM_WEAPON","icon":{"value":"UI_EquipIcon_Sword_Machination","toLink":null},"name":null},"name":"Fleuve Cendre Ferryman","icon":"https://enka.network/ui/UI_EquipIcon_Sword_Machination_Awaken.png"},"icon":"https://enka.network/ui/UI_AvatarIcon_Furina.png"},{"_id":"67b4eee8c7eb82716302dc23","characterId":10000096,"type":"current","uid":"772493838","artifactSets":{"Fragment of Harmonic Whimsy":{"icon":"UI_RelicIcon_15035_4","count":4},"Song of Days Past":{"icon":"UI_RelicIcon_15033_2","count":1}},"calculations":{"fit":{"md5":"55db61dfe6f01dc43fbc7495dd4cf80c","calculationId":"1000009611","short":"OVERLOAD","name":"Overload Combo, Avg DMG","details":"C0 Arlecchino + C6 Chevreuse @ 40k HP + Electro Flex + C6R1 Aquila Bennett @ 4p Noblesse. Combo: E .. CA 5N3. Majority of potential buffs such as 4p Shimenawa / 4p HoD / 4p CW wear off before 5N3 starts due to long setup. Chevreuse stacks for CA 5N3: 0/1/1/1/2/2/2/3/3/3/... BoL value after using CA: 130%. 4p Whimsy stacks for CA 5N3: 1/1/2/3/... ","weapon":{"name":"White Tassel","icon":"https://enka.network/ui/UI_EquipIcon_Pole_Ruby_Awaken.png","substat":"CRIT Rate","type":"Polearm","rarity":3,"refinement":5},"result":816543.4228342879,"stats":null,"ranking":190571,"outOf":666715,"priority":2,"type":"current"}},"constellation":0,"lastBuildUpdate":1739910888587,"md5":"55db61dfe6f01dc43fbc7495dd4cf80c","name":"Arlecchino","stats":null,"weapon":{"weaponId":13301,"weaponInfo":{"level":90,"promoteLevel":6,"refinementLevel":{"value":4}},"flat":{"nameTextMapHash":"1390797107","stars":3,"weaponStats":[{"stat":"FIGHT_PROP_BASE_ATTACK","statValue":401},{"stat":"FIGHT_PROP_CRITICAL","statValue":23.4}],"itemType":"ITEM_WEAPON","icon":{"value":"UI_EquipIcon_Pole_Ruby","toLink":null},"name":null},"name":"White Tassel","icon":"https://enka.network/ui/UI_EquipIcon_Pole_Ruby_Awaken.png"},"icon":"https://enka.network/ui/UI_AvatarIcon_Arlecchino.png"},{"_id":"67f2be06827b14510f6e4420","characterId":10000111,"type":"current","uid":"772493838","artifactSets":{"Long Night's Oath":{"icon":"UI_RelicIcon_15039_4","count":4},"Obsidian Codex":{"icon":"UI_RelicIcon_15038_1","count":1}},"calculations":{"fit":{"md5":"d97eac2218d267643be8762ff0872094","calculationId":"1000011101","short":"OVERLOAD","name":"Overload Combo, Avg DMG","details":"C1 Varesa + C6 Iansan @ 4-pc Cinder City + C6 Chevreuse 4-pc Noblesse + pyro flex. Rotation: ECP ECPsQ ECP ECPsQ ECP. 4-pc Long Night's Oath 4 stacks on first ECP, 5 stacks afterwards. 2-pc Obsidian Codex active only during Fiery Passion state. Varesa has 1 A4 stack.  No Widsith buff selected (same as worst case scenario when you roll EM buff). ","weapon":{"name":"The Widsith","icon":"https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png","substat":"CRIT DMG","type":"Catalyst","rarity":4,"refinement":5},"result":1233872.3268146089,"stats":null,"ranking":27446,"outOf":48728,"priority":2,"type":"current"}},"constellation":0,"lastBuildUpdate":1745064725088,"md5":"d97eac2218d267643be8762ff0872094","name":"Varesa","stats":null,"weapon":{"weaponId":14402,"weaponInfo":{"level":90,"promoteLevel":6,"refinementLevel":{"value":0}},"flat":{"nameTextMapHash":"1163263227","stars":4,"weaponStats":[{"stat":"FIGHT_PROP_BASE_ATTACK","statValue":510},{"stat":"FIGHT_PROP_CRITICAL_HURT","statValue":55.1}],"itemType":"ITEM_WEAPON","icon":{"value":"UI_EquipIcon_Catalyst_Troupe","toLink":null},"name":null},"name":"The Widsith","icon":"https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png"},"icon":"https://enka.network/ui/UI_AvatarIcon_Varesa.png"}]}
+{
+  "ttl": 0,
+  "data": [
+    {
+      "_id": "67643be5a9ccbb26872d6554",
+      "characterId": 10000023,
+      "type": "current",
+      "uid": "772493838",
+      "artifactSets": {
+        "Emblem of Severed Fate": {
+          "icon": "UI_RelicIcon_15020_4",
+          "count": 4
+        },
+        "Viridescent Venerer": {
+          "icon": "UI_RelicIcon_15002_1",
+          "count": 1
+        }
+      },
+      "calculations": {
+        "fit": {
+          "md5": "ee4ccd1955baaa4d20551b7756ec8433",
+          "calculationId": "1000002301",
+          "short": "MONO",
+          "name": "Mono Pyro Pyronado Avg DMG",
+          "details": "c6r5 Xiangling, c6r1 Bennett, c0r1 Kazuha with 1000EM, flex pyro",
+          "weapon": {
+            "name": "\"The Catch\"",
+            "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Mori_Awaken.png",
+            "substat": "Energy Recharge",
+            "type": "Polearm",
+            "rarity": 4,
+            "refinement": 5
+          },
+          "result": 20448.21040698263,
+          "stats": null,
+          "ranking": 254812,
+          "outOf": 498565,
+          "priority": 2,
+          "type": "current"
+        }
+      },
+      "constellation": 1,
+      "lastBuildUpdate": 1743448108983,
+      "md5": "ee4ccd1955baaa4d20551b7756ec8433",
+      "name": "Xiangling",
+      "stats": null,
+      "weapon": {
+        "weaponId": 13415,
+        "weaponInfo": {
+          "level": 80,
+          "promoteLevel": 5,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "nameTextMapHash": "1148024603",
+          "stars": 4,
+          "weaponStats": [
+            {
+              "stat": "FIGHT_PROP_BASE_ATTACK",
+              "statValue": 449
+            },
+            {
+              "stat": "FIGHT_PROP_CHARGE_EFFICIENCY",
+              "statValue": 41.9
+            }
+          ],
+          "itemType": "ITEM_WEAPON",
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Mori",
+            "toLink": null
+          },
+          "name": null
+        },
+        "name": "\"The Catch\"",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Mori_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Xiangling.png"
+    },
+    {
+      "_id": "67643be5a9ccbb26872d6550",
+      "type": "current",
+      "uid": "772493838",
+      "characterId": 10000030,
+      "artifactSets": {
+        "Tenacity of the Millelith": {
+          "icon": "UI_RelicIcon_15017_4",
+          "count": 5
+        }
+      },
+      "calculations": {
+        "fit": {
+          "md5": "a56f3b6696b49f7071ca4b0520064da2",
+          "calculationId": "1000003000",
+          "short": "MAX HP",
+          "name": "Shieldbot, Max HP",
+          "details": "---",
+          "weapon": {
+            "name": "Black Tassel",
+            "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Noire_Awaken.png",
+            "substat": "HP",
+            "type": "Polearm",
+            "rarity": 3,
+            "refinement": 5
+          },
+          "result": 50390.54989603456,
+          "stats": null,
+          "ranking": 318128,
+          "outOf": 768383,
+          "priority": 2,
+          "type": "current"
+        }
+      },
+      "constellation": 0,
+      "lastBuildUpdate": 1737926190884,
+      "md5": "a56f3b6696b49f7071ca4b0520064da2",
+      "name": "Zhongli",
+      "stats": null,
+      "weapon": {
+        "weaponId": 13303,
+        "weaponInfo": {
+          "level": 80,
+          "promoteLevel": 5,
+          "refinementLevel": {
+            "value": 4
+          }
+        },
+        "flat": {
+          "nameTextMapHash": "4103766499",
+          "stars": 3,
+          "weaponStats": [
+            {
+              "stat": "FIGHT_PROP_BASE_ATTACK",
+              "statValue": 314
+            },
+            {
+              "stat": "FIGHT_PROP_HP_PERCENT",
+              "statValue": 42.8
+            }
+          ],
+          "itemType": "ITEM_WEAPON",
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Noire",
+            "toLink": null
+          },
+          "name": null
+        },
+        "name": "Black Tassel",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Noire_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Zhongli.png"
+    },
+    {
+      "_id": "67643be5a9ccbb26872d654a",
+      "characterId": 10000052,
+      "type": "current",
+      "uid": "772493838",
+      "artifactSets": {
+        "Emblem of Severed Fate": {
+          "icon": "UI_RelicIcon_15020_4",
+          "count": 5
+        }
+      },
+      "calculations": {
+        "fit": {
+          "md5": "d8d2dac283ec535ba67cfd5631fd5849",
+          "calculationId": "1000005203",
+          "short": "BURST",
+          "name": "National Raiden Burst, Avg DMG",
+          "details": "Musou no Hitotachi initial slash avg DMG. c0r1 Raiden, c6r5 Xingqiu, c6r5 Xiangling, c6r1 Bennett",
+          "weapon": {
+            "name": "Engulfing Lightning",
+            "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Narukami_Awaken.png",
+            "substat": "Energy Recharge",
+            "type": "Polearm",
+            "rarity": 5,
+            "refinement": 1
+          },
+          "result": 116475.50043989618,
+          "stats": null,
+          "ranking": 306141,
+          "outOf": 1170338,
+          "priority": 2,
+          "type": "current"
+        }
+      },
+      "constellation": 0,
+      "lastBuildUpdate": 1744708175784,
+      "md5": "d8d2dac283ec535ba67cfd5631fd5849",
+      "name": "Raiden Shogun",
+      "stats": null,
+      "weapon": {
+        "weaponId": 13509,
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "nameTextMapHash": "3717849275",
+          "stars": 5,
+          "weaponStats": [
+            {
+              "stat": "FIGHT_PROP_BASE_ATTACK",
+              "statValue": 608
+            },
+            {
+              "stat": "FIGHT_PROP_CHARGE_EFFICIENCY",
+              "statValue": 55.1
+            }
+          ],
+          "itemType": "ITEM_WEAPON",
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Narukami",
+            "toLink": null
+          },
+          "name": null
+        },
+        "name": "Engulfing Lightning",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Narukami_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Shougun.png"
+    },
+    {
+      "_id": "67643be5a9ccbb26872d654e",
+      "type": "current",
+      "uid": "772493838",
+      "characterId": 10000087,
+      "artifactSets": {
+        "Marechaussee Hunter": {
+          "icon": "UI_RelicIcon_15031_4",
+          "count": 4
+        },
+        "Golden Troupe": {
+          "icon": "UI_RelicIcon_15032_1",
+          "count": 1
+        }
+      },
+      "calculations": {
+        "fit": {
+          "md5": "d38795095ef4fa2f0bc51cef1a463a55",
+          "calculationId": "1000008700",
+          "short": "COMBO",
+          "name": "EQ3CA Without Buffs, Avg DMG",
+          "details": "E Q 3CA. Neuvillette + flex + flex + flex. No Hydro resonance. Assumes one of the flexes is a shielder for the sake of 4p Bolide. No other relevant team buffs. Single CA is counted as 8 damage ticks. This leaderboard works for teams with minimal buffs such as electrocharged, hyperbloom, burgeon or solo. Neuvillette averages 75% HP through the combo (relevant for A4 buff) and maintains 3 A1 stacks. 4p HoD full uptime. 4p Nymph's Dream two stacks wear off before 3rd CA. 4p MH assumes Neuvillette is below 68% HP at the beginning of combo. 4p Shimenawa is NOT considered. ",
+          "weapon": {
+            "name": "Tome of the Eternal Flow",
+            "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Iudex_Awaken.png",
+            "substat": "CRIT DMG",
+            "type": "Catalyst",
+            "rarity": 5,
+            "refinement": 1
+          },
+          "result": 740509.4071155014,
+          "stats": null,
+          "ranking": 161638,
+          "outOf": 765686,
+          "priority": 1,
+          "type": "current"
+        }
+      },
+      "constellation": 0,
+      "lastBuildUpdate": 1744389176347,
+      "md5": "d38795095ef4fa2f0bc51cef1a463a55",
+      "name": "Neuvillette",
+      "stats": null,
+      "weapon": {
+        "weaponId": 14402,
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "nameTextMapHash": "1163263227",
+          "stars": 4,
+          "weaponStats": [
+            {
+              "stat": "FIGHT_PROP_BASE_ATTACK",
+              "statValue": 510
+            },
+            {
+              "stat": "FIGHT_PROP_CRITICAL_HURT",
+              "statValue": 55.1
+            }
+          ],
+          "itemType": "ITEM_WEAPON",
+          "icon": {
+            "value": "UI_EquipIcon_Catalyst_Troupe",
+            "toLink": null
+          },
+          "name": null
+        },
+        "name": "The Widsith",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Neuvillette.png"
+    },
+    {
+      "_id": "67dd5347827b14510f1ca88b",
+      "type": "current",
+      "characterId": 10000089,
+      "uid": "772493838",
+      "artifactSets": {
+        "Golden Troupe": {
+          "icon": "UI_RelicIcon_15032_4",
+          "count": 4
+        },
+        "Marechaussee Hunter": {
+          "icon": "UI_RelicIcon_15031_1",
+          "count": 1
+        }
+      },
+      "calculations": {
+        "fit": {
+          "md5": "a4425b1c95c06ef0e1c282d3d47934b2",
+          "calculationId": "1000008904",
+          "short": "SKILL",
+          "name": "Elemental Skill, Avg DMG",
+          "details": "Average DMG for Mademoiselle Crabaletta in a double hydro team. Number of characters who offered HP: 4. Fanfare stacks count: 200. Weapon stacks maxed when applicable. ",
+          "weapon": {
+            "name": "Fleuve Cendre Ferryman",
+            "icon": "https://enka.network/ui/UI_EquipIcon_Sword_Machination_Awaken.png",
+            "substat": "Energy Recharge",
+            "type": "Sword",
+            "rarity": 4,
+            "refinement": 5
+          },
+          "result": 24968.920064735208,
+          "stats": null,
+          "ranking": 44241,
+          "outOf": 1038729,
+          "priority": 2,
+          "type": "current"
+        }
+      },
+      "constellation": 0,
+      "lastBuildUpdate": 1743961606232,
+      "md5": "a4425b1c95c06ef0e1c282d3d47934b2",
+      "name": "Furina",
+      "stats": null,
+      "weapon": {
+        "weaponId": 11426,
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 4
+          }
+        },
+        "flat": {
+          "nameTextMapHash": "1921306659",
+          "stars": 4,
+          "weaponStats": [
+            {
+              "stat": "FIGHT_PROP_BASE_ATTACK",
+              "statValue": 510
+            },
+            {
+              "stat": "FIGHT_PROP_CHARGE_EFFICIENCY",
+              "statValue": 45.9
+            }
+          ],
+          "itemType": "ITEM_WEAPON",
+          "icon": {
+            "value": "UI_EquipIcon_Sword_Machination",
+            "toLink": null
+          },
+          "name": null
+        },
+        "name": "Fleuve Cendre Ferryman",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Sword_Machination_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Furina.png"
+    },
+    {
+      "_id": "67b4eee8c7eb82716302dc23",
+      "characterId": 10000096,
+      "type": "current",
+      "uid": "772493838",
+      "artifactSets": {
+        "Fragment of Harmonic Whimsy": {
+          "icon": "UI_RelicIcon_15035_4",
+          "count": 4
+        },
+        "Song of Days Past": {
+          "icon": "UI_RelicIcon_15033_2",
+          "count": 1
+        }
+      },
+      "calculations": {
+        "fit": {
+          "md5": "55db61dfe6f01dc43fbc7495dd4cf80c",
+          "calculationId": "1000009611",
+          "short": "OVERLOAD",
+          "name": "Overload Combo, Avg DMG",
+          "details": "C0 Arlecchino + C6 Chevreuse @ 40k HP + Electro Flex + C6R1 Aquila Bennett @ 4p Noblesse. Combo: E .. CA 5N3. Majority of potential buffs such as 4p Shimenawa / 4p HoD / 4p CW wear off before 5N3 starts due to long setup. Chevreuse stacks for CA 5N3: 0/1/1/1/2/2/2/3/3/3/... BoL value after using CA: 130%. 4p Whimsy stacks for CA 5N3: 1/1/2/3/... ",
+          "weapon": {
+            "name": "White Tassel",
+            "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Ruby_Awaken.png",
+            "substat": "CRIT Rate",
+            "type": "Polearm",
+            "rarity": 3,
+            "refinement": 5
+          },
+          "result": 816543.4228342879,
+          "stats": null,
+          "ranking": 190571,
+          "outOf": 666715,
+          "priority": 2,
+          "type": "current"
+        }
+      },
+      "constellation": 0,
+      "lastBuildUpdate": 1739910888587,
+      "md5": "55db61dfe6f01dc43fbc7495dd4cf80c",
+      "name": "Arlecchino",
+      "stats": null,
+      "weapon": {
+        "weaponId": 13301,
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 4
+          }
+        },
+        "flat": {
+          "nameTextMapHash": "1390797107",
+          "stars": 3,
+          "weaponStats": [
+            {
+              "stat": "FIGHT_PROP_BASE_ATTACK",
+              "statValue": 401
+            },
+            {
+              "stat": "FIGHT_PROP_CRITICAL",
+              "statValue": 23.4
+            }
+          ],
+          "itemType": "ITEM_WEAPON",
+          "icon": {
+            "value": "UI_EquipIcon_Pole_Ruby",
+            "toLink": null
+          },
+          "name": null
+        },
+        "name": "White Tassel",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Pole_Ruby_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Arlecchino.png"
+    },
+    {
+      "_id": "67f2be06827b14510f6e4420",
+      "characterId": 10000111,
+      "type": "current",
+      "uid": "772493838",
+      "artifactSets": {
+        "Long Night's Oath": {
+          "icon": "UI_RelicIcon_15039_4",
+          "count": 4
+        },
+        "Obsidian Codex": {
+          "icon": "UI_RelicIcon_15038_1",
+          "count": 1
+        }
+      },
+      "calculations": {
+        "fit": {
+          "md5": "d97eac2218d267643be8762ff0872094",
+          "calculationId": "1000011101",
+          "short": "OVERLOAD",
+          "name": "Overload Combo, Avg DMG",
+          "details": "C1 Varesa + C6 Iansan @ 4-pc Cinder City + C6 Chevreuse 4-pc Noblesse + pyro flex. Rotation: ECP ECPsQ ECP ECPsQ ECP. 4-pc Long Night's Oath 4 stacks on first ECP, 5 stacks afterwards. 2-pc Obsidian Codex active only during Fiery Passion state. Varesa has 1 A4 stack.  No Widsith buff selected (same as worst case scenario when you roll EM buff). ",
+          "weapon": {
+            "name": "The Widsith",
+            "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png",
+            "substat": "CRIT DMG",
+            "type": "Catalyst",
+            "rarity": 4,
+            "refinement": 5
+          },
+          "result": 1233872.3268146089,
+          "stats": null,
+          "ranking": 27446,
+          "outOf": 48728,
+          "priority": 2,
+          "type": "current"
+        }
+      },
+      "constellation": 0,
+      "lastBuildUpdate": 1745064725088,
+      "md5": "d97eac2218d267643be8762ff0872094",
+      "name": "Varesa",
+      "stats": null,
+      "weapon": {
+        "weaponId": 14402,
+        "weaponInfo": {
+          "level": 90,
+          "promoteLevel": 6,
+          "refinementLevel": {
+            "value": 0
+          }
+        },
+        "flat": {
+          "nameTextMapHash": "1163263227",
+          "stars": 4,
+          "weaponStats": [
+            {
+              "stat": "FIGHT_PROP_BASE_ATTACK",
+              "statValue": 510
+            },
+            {
+              "stat": "FIGHT_PROP_CRITICAL_HURT",
+              "statValue": 55.1
+            }
+          ],
+          "itemType": "ITEM_WEAPON",
+          "icon": {
+            "value": "UI_EquipIcon_Catalyst_Troupe",
+            "toLink": null
+          },
+          "name": null
+        },
+        "name": "The Widsith",
+        "icon": "https://enka.network/ui/UI_EquipIcon_Catalyst_Troupe_Awaken.png"
+      },
+      "icon": "https://enka.network/ui/UI_AvatarIcon_Varesa.png"
+    }
+  ]
+}
