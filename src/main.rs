@@ -7,6 +7,7 @@ use std::collections::HashMap;
 use std::sync::mpsc::{channel, Receiver, Sender};
 use std::sync::{Arc, Mutex};
 mod icons;
+use std::path::PathBuf;
 
 struct CharacterIcon {
 	texture: RetainedImage,
@@ -55,12 +56,34 @@ struct MyApp {
 }
 
 impl MyApp {
+	fn get_config_dir() -> PathBuf {
+		if cfg!(windows) {
+			let local_app_data = std::env::var("LOCALAPPDATA")
+				.unwrap_or_else(|_| {
+					let user_profile = std::env::var("USERPROFILE")
+						.expect("Failed to get user profile directory");
+					format!("{}/AppData/Local", user_profile)
+				});
+			PathBuf::from(local_app_data).join("genshin-viewer")
+		} else {
+			let home = std::env::var("HOME")
+				.expect("Failed to get home directory");
+			PathBuf::from(home).join(".config").join("genshin-viewer")
+		}
+	}
+
+	fn get_uid_file_path() -> PathBuf {
+		let config_dir = Self::get_config_dir();
+		std::fs::create_dir_all(&config_dir).ok();
+		config_dir.join("saved_uid.txt")
+	}
+
 	fn new(cc: &CreationContext) -> Self {
 		let (tx, rx) = channel();
 		let rt = tokio::runtime::Runtime::new().unwrap();
 		
 		// Try to load saved UID
-		let uid = std::fs::read_to_string("saved_uid.txt").ok();
+		let uid = std::fs::read_to_string(Self::get_uid_file_path()).ok();
 		
 		let mut app = Self {
 			characters: None,
@@ -136,7 +159,7 @@ impl MyApp {
 
 	fn save_uid(&self) {
 		if let Some(uid) = &self.uid {
-			std::fs::write("saved_uid.txt", uid).ok();
+			std::fs::write(Self::get_uid_file_path(), uid).ok();
 		}
 	}
 
@@ -146,7 +169,7 @@ impl MyApp {
 		self.calculations = None;
 		self.selected_character = None;
 		self.uid_input.clear();
-		std::fs::remove_file("saved_uid.txt").ok();
+		std::fs::remove_file(Self::get_uid_file_path()).ok();
 	}
 
 	async fn load_icon(url: &str) -> Result<RetainedImage, Box<dyn std::error::Error>> {
